@@ -5,6 +5,7 @@ class Gui:
 
     def __init__(self):
         self.root = Tk()
+        self.root.title("Christmas Game by Lauritz Kremzow")
 
         # Loading Images
         self.bg_img = PhotoImage(file="images\\bg.gif")
@@ -12,6 +13,6 @@ class Gui:
         self.snowflake_img = PhotoImage(file="images\\snowflake.gif")
         
         # Creating Background on Canvas
-        self.canvas = Canvas(width="1080", height="500")
-        self.canvas.create_image(0, 0, anchor=NW, image=self.bg_img)
-        self.canvas.pack()
+        self.main_canvas = Canvas(width="1080", height="500")
+        self.main_canvas.create_image(0, 0, anchor=NW, image=self.bg_img)
+        self.main_canvas.pack()
