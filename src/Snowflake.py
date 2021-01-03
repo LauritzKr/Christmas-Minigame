@@ -1,15 +1,17 @@
 from threading import Thread
 from random import randint
 from time import sleep
+import Santa
 
 
 class Snowflake(Thread):
 
     def __init__(self, gui, image):
         Thread.__init__(self)
+        Santa.Santa.snow.append(self)
 
         # Creating Snowflake Image
-        self.canvas= gui.main_canvas
+        self.canvas = gui.main_canvas
         self.snow_id = self.canvas.create_image(0, 0, image=image)
 
         # Placing It Randomly
