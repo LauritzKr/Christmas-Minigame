@@ -1,17 +1,18 @@
-from src import Gui, Santa, Snowflake
+from src import gui, santa, snowflake
 
 
 class Main:
     
     def __init__(self):
         # Gui Instance
-        self.gui = Gui.Gui()
+        self.gui = gui.Gui()
 
         # Santa / Snowflake Instances
-        Santa.Santa(self.gui, self.gui.santa_img)
+        self.santa = santa.Santa(self.gui, self.gui.santa_img)
         for _ in range(10):
-            Snowflake.Snowflake(self.gui, self.gui.snowflake_img) 
-        
+            self.snowflake = snowflake.Snowflake(self.gui, self.gui.snowflake_img)
+            self.santa.snow.append(self.snowflake)
+
         # Mainloop
         self.gui.root.mainloop()
 
