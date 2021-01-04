@@ -12,12 +12,12 @@ class Gui:
 
     def __init__(self):
         self.root = Tk()
-        self.root.title("Christmas Game by Lauritz Kremzow")
+        self.root.title("Collisions Game by Lauritz Kremzow")
 
         # Loading Images
-        self.bg_img = PhotoImage(file="images\\bg.gif")
-        self.santa_img = PhotoImage(file="images\\player.gif")
-        self.obstacle_img = PhotoImage(file="images\\obstacle.gif")
+        self.bg_img = PhotoImage(file="assets\\bg.gif")
+        self.player_img = PhotoImage(file="assets\\player.gif")
+        self.obstacle_img = PhotoImage(file="assets\\obstacle.gif")
         
         # Creating Background on Canvas
         self.main_canvas = Canvas(width="1080", height="500")

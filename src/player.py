@@ -39,7 +39,7 @@ class Player(Thread):
             sleep(0.01)
             self.check_obs_collision()
             self.check_edge_collision()
-            self.canvas.move(self.santa_id, self.vel, 0)
+            self.canvas.move(self.player_id, self.vel, 0)
 
     def check_obs_collision(self):
         # Player's Hitbox (4-Tupel with x1, y1, x2, y2)

@@ -16,11 +16,11 @@ class Main:
         # Gui Instance
         self.gui = gui.Gui()
 
-        # Santa Instance
-        self.player = player.Player(self.gui, self.gui.santa_img)
+        # Player Instance
+        self.player = player.Player(self.gui, self.gui.player_img)
 
-        # obstacleInstances inside playersers List
-        for _ in range(10):
+        # Obstacle Instances inside players List
+        for _ in range(8):
             self.player.obstacles.append(
                 obstacle.Obstacle(self.gui, self.gui.obstacle_img)
             )
