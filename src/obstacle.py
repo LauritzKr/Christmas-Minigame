@@ -21,7 +21,7 @@ class Obstacle(Thread):
         # Placing It Randomly
         self.reset_pos()
 
-        # Mainthread
+        # Move it across the Screen in a Separate Thread
         self.start()
 
     def reset_pos(self):

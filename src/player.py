@@ -1,8 +1,8 @@
 '''
 The player class controls the movement
-of the player acros the 2D screen and
-also checks for collisions and when the
-game is over.
+of the player across the 2D screen and
+also checks for collisions and thus 
+when the game is over.
 '''
 
 
@@ -40,7 +40,7 @@ class Player(Thread):
         while True:
             sleep(0.01)
             self.check_edge_collision()
-            self.check_obs_collision()
+            self.check_obstacle_collision()
             self.canvas.move(self.player_id, self.x_vel, self.y_vel)
 
     def check_edge_collision(self):
@@ -52,7 +52,7 @@ class Player(Thread):
         if self.canvas.coords(self.player_id)[0] > 1100:
             self.canvas.coords(self.player_id, -20, 460)
 
-    def check_obs_collision(self):
+    def check_obstacle_collision(self):
         # Player's Hitbox (4-Tupel with x1, y1, x2, y2)
         player_hb = self.canvas.bbox(self.player_id)
 

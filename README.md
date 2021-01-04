@@ -1,5 +1,9 @@
 # Christmas Minigame
 
-Here is a little christmas-themed minigame I had to do as a homework! :) To execute, click the green "Code" button and then "Download ZIP". Extract the ZIP-file and execute main.py inside the master folder.
+Here is a little christmas-themed minigame I had to do as a homework! :) 
+
+To execute, click the green "Code" button and then "Download ZIP". Extract the ZIP-file and execute main.py inside the master folder.
+
+To change the theme, go to themes/...theme and copy and replace all the images into assets.
 
 # Have fun! :D 
