@@ -19,12 +19,12 @@ class Obstacle(Thread):
         self.obstacle_id = self.canvas.create_image(0, 0, image=image)
 
         # Placing It Randomly
-        self.__set_rand_pos()
+        self.reset_pos()
 
         # Mainthread
         self.start()
 
-    def __set_rand_pos(self):
+    def reset_pos(self):
         self.canvas.coords(self.obstacle_id, randint(0, 1080), -randint(50, 150))
         self.x_vel = randint(-1, 1)
         self.y_vel = randint(2, 3)
@@ -38,4 +38,4 @@ class Obstacle(Thread):
     def check_edge_collision(self):
         # Transition from Bottom to Top Screen Edge
         if self.canvas.coords(self.obstacle_id)[1] > 600:
-            self.__set_rand_pos()
+            self.reset_pos()
