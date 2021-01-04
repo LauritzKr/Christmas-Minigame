@@ -1,3 +1,8 @@
+'''
+This snowflake class 
+'''
+
+
 from threading import Thread
 from random import randint
 from time import sleep
@@ -25,10 +30,11 @@ class Snowflake(Thread):
 
     def run(self):
         while True:
-            # Moving Snowflake
             sleep(0.01)
+            self.check_edge_collision()
             self.canvas.move(self.snow_id, self.x_vel, self.y_vel)
 
-            # Transition from Bottom to Top Screen Edge
-            if self.canvas.coords(self.snow_id)[1] > 600:
-                self.__set_rand_pos()
+    def check_edge_collision(self):
+        # Transition from Bottom to Top Screen Edge
+        if self.canvas.coords(self.snow_id)[1] > 600:
+            self.__set_rand_pos()

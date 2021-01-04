@@ -1,3 +1,12 @@
+'''
+The main class is designed to JUST create 
+the different objects needed for the game 
+and therefore hide as much of the source 
+code (src folder) as possible when executing 
+the program. 
+'''
+
+
 from src import gui, santa, snowflake
 
 
@@ -7,11 +16,14 @@ class Main:
         # Gui Instance
         self.gui = gui.Gui()
 
-        # Santa / Snowflake Instances
+        # Santa Instance
         self.santa = santa.Santa(self.gui, self.gui.santa_img)
+
+        # Snowflake Instances inside Snow List
         for _ in range(10):
-            self.snowflake = snowflake.Snowflake(self.gui, self.gui.snowflake_img)
-            self.santa.snow.append(self.snowflake)
+            self.santa.snow.append(
+                snowflake.Snowflake(self.gui, self.gui.snowflake_img)
+            )
 
         # Mainloop
         self.gui.root.mainloop()

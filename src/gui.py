@@ -1,3 +1,10 @@
+'''
+The GUI class is exclusivly made to create
+and configure the graphical elements of the 
+game (tkinter widgets).
+'''
+
+
 from tkinter import *
 
 
