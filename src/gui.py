@@ -16,8 +16,8 @@ class Gui:
 
         # Loading Images
         self.bg_img = PhotoImage(file="images\\bg.gif")
-        self.santa_img = PhotoImage(file="images\\santa.gif")
-        self.snowflake_img = PhotoImage(file="images\\snowflake.gif")
+        self.santa_img = PhotoImage(file="images\\player.gif")
+        self.obstacle_img = PhotoImage(file="images\\obstacle.gif")
         
         # Creating Background on Canvas
         self.main_canvas = Canvas(width="1080", height="500")

@@ -7,7 +7,7 @@ the program.
 '''
 
 
-from src import gui, santa, snowflake
+from src import gui, player, obstacle
 
 
 class Main:
@@ -17,12 +17,12 @@ class Main:
         self.gui = gui.Gui()
 
         # Santa Instance
-        self.santa = santa.Santa(self.gui, self.gui.santa_img)
+        self.player = player.Player(self.gui, self.gui.santa_img)
 
-        # Snowflake Instances inside Snow List
+        # obstacleInstances inside playersers List
         for _ in range(10):
-            self.santa.snow.append(
-                snowflake.Snowflake(self.gui, self.gui.snowflake_img)
+            self.player.obstacles.append(
+                obstacle.Obstacle(self.gui, self.gui.obstacle_img)
             )
 
         # Mainloop
