@@ -34,7 +34,7 @@ class Player(Thread):
         self.x_vel = x_vel
 
     def set_y_vel(self, event, y_vel):
-        self.x_vel = y_vel
+        self.y_vel = y_vel
 
     def run(self):
         while True:
